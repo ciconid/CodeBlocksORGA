@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1723833660 source:c:\cico\uns\_organizacion_de_computadoras\codeblocks\elshamoun\main.c
+	<stdio.h>
+	<stdlib.h>
+
