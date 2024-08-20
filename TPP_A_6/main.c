@@ -8,41 +8,13 @@ int convertir_a_decimal(char c);
 
 int main()
 {
-    //char cadena[];
-    /*char test;
-    char hola[] = "hola";
-    char mundo[] = "mundo";
-    char c = 'h';
-    char buffer[2];
-    buffer[0] = c;
-    buffer[1] = '\0';
-
-    strcat(hola,mundo);
-    printf("%s \n",hola);
-    strcat(hola,buffer);
-    printf("%s \n",hola);
-
-    printf("Ingrese una cadena de digitos en hexadecimal: ");
-
-    while(test != '\n'){
-        scanf("%c",&test);
-        printf("%d - %c\n",test,test);
-
-      //  cadena
-    }
-    */
-
     char actual,
-        cadena[30],
-        buffer[2],
-        caracter;
+        cadena[30];
     int longitud = 0,
         decimal = 0,
         pot6 = 0,
         index = 0,
         d_test = 0;
-
-    buffer[1] = '\0';
 
     printf("Ingrese una cadena de digitos en hexadecimal: ");
     scanf("%c", &actual);
@@ -53,16 +25,9 @@ int main()
             printf("NO ESTA EN HEXADECIMAL!");
             return 0;
         }
-        // d_test = convertir_a_decimal('a');
-        //buffer[0] = actual;
-        //strcat(cadena,buffer);
+
         cadena[index] = actual;
         cadena[index + 1] = '\0';
-
-        //longitud = strlen(cadena);
-        //printf("longitud de cadena: %i  ", longitud);
-        //printf("cadena:  %s \n", cadena);
-
 
         scanf("%c", &actual);
         index++;
@@ -74,7 +39,6 @@ int main()
         d_test = convertir_a_decimal(cadena[i]);
         decimal = decimal + pow(16.0, pot6 * 1.0) * d_test;
         pot6++;
-        caracter = cadena[i];
     }
 
     printf("HEX --> DEC \n");
@@ -162,7 +126,7 @@ int convertir_a_decimal(char cc){
             return 15;
     }
 
-
+    return 1450;
 }
 
 
