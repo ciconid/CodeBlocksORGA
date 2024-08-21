@@ -5,6 +5,11 @@ void a();
 int cant_digitos(int num);
 void b();
 int cant_veces_d_en_n(int num, int dig);
+void c();
+int cant_dig_pares_en_pos_impar(int n); // Este es el shell
+int cant_dig_recur(int n, int p);
+int es_par(int n);
+int es_impar(int n);
 
 int main()
 {
@@ -13,7 +18,7 @@ int main()
     printf("--- TPP A ej 7) --- \n");
     printf("a) Cantidad de digitos de un numero entero \n");
     printf("b) Cantidad de veces que aparece el digito d en n \n");
-    printf("c) \n");
+    printf("c) Cantidad de digitos pares en posicion impar \n");
     printf("\n");
 
     do{
@@ -28,6 +33,9 @@ int main()
         break;
     case 'b':
         b();
+        break;
+    case 'c':
+        c();
         break;
 
 
@@ -102,3 +110,57 @@ int cant_veces_d_en_n(int num, int dig){
 }
 
 //-------- b -----------------
+//-------- c -----------------
+void c(){
+    int n;
+
+    printf("Ingrese n: ");
+    scanf("%d", &n);
+
+    printf("Cantidad de digitos pares en posiciones impares de %d es: %d \n",
+            n, cant_dig_pares_en_pos_impar(n));
+
+
+}
+// Este es el shell
+int cant_dig_pares_en_pos_impar(int n){
+    return cant_dig_recur(n, 1);
+}
+int cant_dig_recur(int n, int p){
+    int to_ret;
+
+    //CB
+    if(n <= 9){
+        if(es_impar(p) && es_par(n)){
+            to_ret = 1;
+        }else{
+            to_ret = 0;
+        }
+    }else{
+        // CR
+        int ultimo = n %10;
+        if(es_impar(p) && es_par(ultimo)){
+            to_ret = cant_dig_recur(n / 10, p + 1) + 1;
+        }else{
+            to_ret = cant_dig_recur(n / 10, p + 1);
+        }
+    }
+
+    return to_ret;
+}
+int es_par(int n){
+    return n % 2 == 0;
+}
+int es_impar(int n){
+    return n % 2 != 0;
+}
+
+
+
+
+
+
+
+
+
+//-------- c -----------------
