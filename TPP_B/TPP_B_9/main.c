@@ -12,7 +12,7 @@ int main(int argc, char* argv[])
     // Aca empieza el ejercicio 8 de verdad
     FILE* archivo1 = fopen(argv[1], "r");
     FILE* archivo2 = fopen(argv[2], "w+");
-    char buffer[100],
+    char buffer[10],
         buffer2[100];
 
     // Apertura de archivos
@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
 
 
     printf("*** Contenidos del archivo %s ***\n",argv[1]);
-    while(fgets(buffer,100,archivo1) != NULL){
+    while(fgets(buffer,10,archivo1) != NULL){
         printf("%s",buffer);
         fprintf(archivo2,buffer);
     }
