@@ -13,7 +13,13 @@ int main()
 
     #ifdef DEBUG
         struct empleado e = {"Gonzalez","Speedy","123 Guga St.","420660",
-                                m,32,posgrado,casado};
+                                m,32,posgrado,casado},
+            empleado1 = {"Mario","Luigi","13 dsfst.","420660",
+                                m,15,secundarios,viudo},
+            empleado2;
+
+            empleado1 = empleado2;
+            //empleado2 = empleado1;
 //        struct automovil a = {"Fiat","Argo",2023,"CID248",muy_bueno,9000000};
 
   /*      printf("%s \n",e.apellido);

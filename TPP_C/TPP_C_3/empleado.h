@@ -6,8 +6,8 @@ enum sex {m,f};
 
 // Definicion de la estructura empleado
 struct empleado {
-    char apellido[40];
-    char nombre[40];
+    char apellido[41];
+    char nombre[41];
     char domicilio[50]; // Quizas es mejor usar un struct de tipo domicilio
     char telefono[30];
     enum sex sexo;
