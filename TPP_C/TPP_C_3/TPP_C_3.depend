@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1726018513 source:c:\cico\uns\_organizacion_de_computadoras\codeblocksorga\tpp_c\tpp_c_3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"empleado.h"
+	"automovil.h"
+
+1726018411 c:\cico\uns\_organizacion_de_computadoras\codeblocksorga\tpp_c\tpp_c_3\empleado.h
+
+1726012495 c:\cico\uns\_organizacion_de_computadoras\codeblocksorga\tpp_c\tpp_c_3\automovil.h
+
+1726018479 source:c:\cico\uns\_organizacion_de_computadoras\codeblocksorga\tpp_c\tpp_c_3\empleado.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"empleado.h"
+
